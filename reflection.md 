@@ -1,0 +1,11 @@
+1. Which issues were easiest/hardest to fix?
+The easiest fixes were formatting and unused variables flagged by Flake8. The hardest was dealing with mutable default arguments because it required understanding Python’s function behavior and modifying logic safely.
+
+2. False Positives:
+Bandit flagged a “possible use of eval()” that was actually part of a safe data parsing routine. After review, this was a false positive as the input was strictly sanitized.
+
+3. Integration into Workflow:
+These tools can be added to GitHub Actions CI pipeline to automatically analyze code on each push or pull request. Developers can also run them locally before committing changes.
+
+4. Tangible Improvements:
+After applying the fixes, the code became more consistent, readable, and secure. Potential runtime errors and security vulnerabilities were eliminated, and the Pylint score reflected higher code quality.
